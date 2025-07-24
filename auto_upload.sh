@@ -8,6 +8,9 @@ if [ -f "$selected" ]; then
   response=$(curl -F "file=@$selected" https://0x0.st)
   echo -e "\n🔗 URL: $response" | lolcat
   echo "$response" | termux-clipboard-set 2>/dev/null && echo "📋 URL dicopy ke clipboard!" | lolcat
+
+  # Simpan ke log
+  echo "$(date '+%Y-%m-%d %H:%M:%S') | $selected | $response" >> upload_log.txt
 else
   echo "❌ File tidak ditemukan atau bukan file biasa." | lolcat
 fi
