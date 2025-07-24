@@ -1845,3 +1845,20 @@ Pre-built Docker images are available on my [DockerHub](https://hub.docker.com/u
 ![](https://hit.yhype.me/github/profile?user_id=2211051)
 
 <!-- OTHER_REPOS_END -->
+cat > README.md << EOF
+# 🚀 SOFTSEC7 DevOps Tools
+
+Kumpulan skrip bash untuk automasi layanan internet, API gateway, file sharing, dan cyberpunk branding.
+
+## 💡 Highlights
+- File & text uploader: Catbox, Pastebin, Termbin
+- API clients: DigitalOcean, Ngrok, Jira
+- WordPress automation & badge embedder
+- Terminal launcher + glitch theme
+
+Made in Termux by @dayakmaut71 😎
+EOF
+
+git add README.md
+git commit -m "🧾 Add interactive README"
+git push
