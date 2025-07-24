@@ -1,11 +1,55 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <title>SOFTSEC7 Homepage</title>
+  <meta charset="UTF-8">
+  <title>SOFTSEC7 Tools Launcher</title>
+  <link rel="manifest" href="manifest.json">
+  <link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap" rel="stylesheet">
+  <style>
+    body {
+      background-color: #000;
+      color: #0ff;
+      font-family: 'Share Tech Mono', monospace;
+      padding: 2em;
+      line-height: 1.6;
+    }
+    h1 {
+      font-size: 2.5em;
+      color: #f0f;
+      text-shadow: 0 0 5px #f0f, 0 0 10px #0ff;
+      border-right: 2px solid #0ff;
+      white-space: nowrap;
+      overflow: hidden;
+      animation: typing 3s steps(30) 1s forwards, blink 0.7s step-end infinite;
+    }
+    @keyframes typing { from { width: 0 } to { width: 100% } }
+    @keyframes blink { 50% { border-color: transparent } }
+    .glitch-hover:hover {
+      text-shadow: 0 0 5px #0ff, 0 0 10px #f0f, 0 0 20px #0ff;
+      transition: 0.3s;
+    }
+    a {
+      display: block;
+      margin-top: 1.5em;
+      font-size: 1.2em;
+      color: #0ff;
+      text-decoration: none;
+    }
+  </style>
 </head>
 <body>
-  <h1>Welcome to DevOps-Bash-tools</h1>
-  <p>This is the glitch-style homepage for SOFTSEC7</p>
-  <a href="upload_viewer.html">View Upload History</a>
+  <h1 id="typewriter">🚀 Welcome to SOFTSEC7 Tools</h1>
+  <p>Your cyberpunk terminal for Bash automation and DevOps launcher.</p>
+  <a class="glitch-hover" href="upload_viewer.html">📦 View Upload History</a>
+  <a class="glitch-hover" href="auto_upload.sh">⚙️ Download auto_upload.sh</a>
+  <a class="glitch-hover" href="launch.sh">🎮 Launch Bash Tools</a>
+
+  <script>
+    if ("serviceWorker" in navigator) {
+      navigator.serviceWorker.register("service-worker.js")
+        .then(() => console.log("🛡️ Service Worker ready"))
+        .catch(e => console.error("SW failed", e));
+    }
+  </script>
 </body>
 </html>

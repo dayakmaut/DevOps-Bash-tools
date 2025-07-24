@@ -1,0 +1,16 @@
+{
+  "name": "SOFTSEC7 Tools Launcher",
+  "short_name": "SOFTSEC7",
+  "start_url": "./index.html",
+  "display": "standalone",
+  "background_color": "#000000",
+  "theme_color": "#0ff0ff",
+  "description": "Glitch-style DevOps toolset dashboard.",
+  "icons": [
+    {
+      "src": "icon512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}
